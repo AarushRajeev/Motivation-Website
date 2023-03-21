@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Motivation Station</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 48px;
+			margin-top: 0;
+			color: #333;
+		}
+
+		p {
+			font-size: 24px;
+			color: #777;
+			margin-bottom: 20px;
+		}
+
+		button {
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+		}
+
+		button:hover {
+			background-color: #555;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Motivation Station</h1>
+		<p id="message"></p>
+		<button onclick="showMessage()">Give me more motivation!</button>
+	</div>
+
+	<script>
+		const messages = [
+			"Don't watch the clock; do what it does. Keep going.",
+			"Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+			"Success is not final, failure is not fatal: It is the courage to continue that counts.",
+			"Positive anything is better than negative nothing.",
+			"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.",
+			"You are never too old to set another goal or to dream a new dream.",
+			"Believe you can and you're halfway there.",
+			"Success is stumbling from failure to failure with no loss of enthusiasm.",
+			"Keep your face always toward the sunshine - and shadows will fall behind you.",
+			"Good things come to those who hustle.",
+			"The best way to predict your future is to create it.",
+		];
+
+		function showMessage() {
+			const randomIndex = Math.floor(Math.random() * messages.length);
+			document.getElementById("message").textContent = messages[randomIndex];
+		}
+
+		setInterval(showMessage, 60000);
+	</script>
+</body>
+</html>
+
+
